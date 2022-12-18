@@ -1,0 +1,11 @@
+aws_access_key_id = "ASIAWFHJWX4CS45W6PZ4"
+aws_secret_access_key = "VUWpw7+/LpMykYuyOYPe883VQ/P0mDAHiDMrbx6m"
+aws_session_token = "FwoGZXIvYXdzEB0aDI/myT193pc9ZxcPUCLHAZtRuzUjqu2KVbfqj/5oJ1OXLillZz9q3mAzXOEciFib7M2o0lcKoF2U2afqMLn90wALirOuRf4D5bvtwnhIrh8TidUjtwew8LS4+iPJTtyibhV+HUqzPabY/mkUWL5mCRX5cIIWHdpNX1NxgO8FyabyyAB1CwuYQHjRsjNfWMZZvcUsYIQXofW7jaamnI6Lf8F3qfZRL+J8w2zBq0A4UuPJmSEVJSZrOndgJhT2UfymjYRPDDW8qcBbi/tqBSKCGZcx+kaR/QUotPD7nAYyLS35PvhNGDMW85TZulxkB6GKbBdCO9ry8OknZaqyATPJ5fKdv/rYoty2qN+QZA=="
+
+
+
+
+
+#Redshift Cluster "can not create" LabRole unable to access Redshift via boto3
+cluster_user = "awsuser"
+cluster_password = "eazhiKb228WYGZs"
