@@ -13,11 +13,13 @@ final as (
                 ORDER BY date_treated,petid ASC
                  
             ) AS treatmentcase_key
-        ,* ,petid
-        ,.date_treated
-        ,.proceduretype
-        ,.proceduresubcode
-        ,.procedure_key
+         
+        ,petid
+        ,date_treated
+        ,proceduretype
+        ,proceduresubcode
+        ,procedure_key
+        
     FROM stg2_phistory
     
 )

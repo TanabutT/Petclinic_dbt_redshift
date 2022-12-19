@@ -13,9 +13,9 @@ dimprocedure as (
     SELECT * FROM {{ ref('dimprocedure')}}
 ),
 
-history as (
+stg3_phistorywithkey as (
 
-    SELECT * FROM {{ ref('stg_phistory')}}
+    SELECT * FROM {{ ref('stg3_phistorywithkey')}}
 ),
 
 
@@ -46,9 +46,9 @@ final as (
         ,dimprocedure.price
 
         
-    FROM history
-    JOIN dimpet using (pet_key)
-    JOIN dimdate using (date_key)
+    FROM stg3_phistorywithkey
+    JOIN dimpet using (pet_id)
+    JOIN dimdate using (date_treated)
     JOIN dimprocedure using (procedure_key)
 
 )
