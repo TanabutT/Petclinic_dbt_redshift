@@ -1,4 +1,4 @@
-with dimProcedure as (
+with dimprocedure as (
 
     select 
         ROW_NUMBER() OVER 
@@ -21,7 +21,7 @@ final as (
         ,procedure_description
         ,price
 
-    FROM dimProcedure
+    FROM dimprocedure
 )
 
 

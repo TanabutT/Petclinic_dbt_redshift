@@ -1,19 +1,19 @@
-with dimDate as (
+with dimdate as (
 
-    SELECT * FROM {{ ref('dimDate')}}
+    SELECT * FROM {{ ref('dimdate')}}
 ),
 
-with dimPet as (
+dimpet as (
 
-    SELECT * FROM {{ ref('dimPet')}}
+    SELECT * FROM {{ ref('dimpet')}}
 ),
 
-with dimProcedure as (
+dimprocedure as (
 
-    SELECT * FROM {{ ref('dimProcedure')}}
+    SELECT * FROM {{ ref('dimprocedure')}}
 ),
 
-with history as (
+history as (
 
     SELECT * FROM {{ ref('stg_phistory')}}
 ),
@@ -22,34 +22,34 @@ with history as (
 
 final as (
     SELECT 
-        dimDate.date_key
-        ,dimDate.date_treated
+        dimdate.date_key
+        ,dimdate.date_treated
 
-        ,dimPet.pet_key
-        ,dimPet.petid
-        ,dimPet.kind
-        ,dimPet.gender
-        ,dimPet.age
-        ,dimPet.ownerid
-        ,dimPet.ownername
-        ,dimPet.ownersurname
-        ,dimPet.streetaddress
-        ,dimPet.city
-        ,dimPet.statename
-        ,dimPet.fullstatename
-        ,dimPet.zipcode
+        ,dimpet.pet_key
+        ,dimpet.petid
+        ,dimpet.kind
+        ,dimpet.gender
+        ,dimpet.age
+        ,dimpet.ownerid
+        ,dimpet.ownername
+        ,dimpet.ownersurname
+        ,dimpet.streetaddress
+        ,dimpet.city
+        ,dimpet.statename
+        ,dimpet.fullstatename
+        ,dimpet.zipcode
 
-        ,dimProcedure.procedure_key
-        ,dimProcedure.proceduretype
-        ,dimProcedure.proceduresubcode
-        ,dimProcedure.procedure_description
-        ,dimProcedure.price
+        ,dimprocedure.procedure_key
+        ,dimprocedure.proceduretype
+        ,dimprocedure.proceduresubcode
+        ,dimprocedure.procedure_description
+        ,dimprocedure.price
 
         
     FROM history
-    JOIN dimPet using (pet_key)
-    JOIN dimDate using (date_key)
-    JOIN dimProcedure using (procedure_key)
+    JOIN dimpet using (pet_key)
+    JOIN dimdate using (date_key)
+    JOIN dimprocedure using (procedure_key)
 
 )
 

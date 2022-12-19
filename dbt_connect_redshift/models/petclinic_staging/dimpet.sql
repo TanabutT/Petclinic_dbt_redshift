@@ -3,7 +3,7 @@ with petdetail as (
     SELECT * FROM {{ ref('stg_pets')}}
 ),
 
-with ownerdetail as (
+ownerdetail as (
 
     SELECT * FROM {{ ref('stg_owners')}}
 ),

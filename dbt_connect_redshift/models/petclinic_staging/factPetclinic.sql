@@ -1,6 +1,6 @@
 with facttable as (
 
-    SELECT * FROM {{ ref('stg_factlesstable')}}
+    SELECT * FROM {{ ref('stg_factlessTable')}}
 ),
 
 final as (

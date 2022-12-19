@@ -11,7 +11,7 @@ final as (
                 ORDER BY date_treated ASC
                  
             ) AS date_key
-        ,convert(datetime, date_treated, 103) as date_treated
+        ,date_treated
 
     FROM history
 )
