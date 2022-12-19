@@ -9,6 +9,13 @@ python -m venv ENV
 .\ENV\Scripts\activate
 pip install -r requirements.txt
 ```
+## for linux
+```sh
+python -m venv ENV
+source ./ENV/bin/activate
+pip install -r requirements.txt
+```
+
 
 ## dbt connect with redshift
 ### install dbt core and dbt redshift
