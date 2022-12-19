@@ -1,5 +1,3 @@
---{{ config(materialized='table') }}
-
 with dimProcedure as (
 
     select 
@@ -10,12 +8,22 @@ with dimProcedure as (
             ) AS procedure_key
         ,* 
 
-    from pdetail
+    from {{ref('stg_pdetail')}}
     ORDER BY procedure_key
 
+),
+
+final as (
+    SELECT
+        procedure_key
+        ,proceduretype
+        ,proceduresubcode
+        ,procedure_description
+        ,price
+
+    FROM dimProcedure
 )
 
 
-
-SELECT * from dimProcedure 
+SELECT * from final 
 
