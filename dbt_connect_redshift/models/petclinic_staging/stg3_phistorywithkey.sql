@@ -18,9 +18,8 @@ final as (
         ,.proceduretype
         ,.proceduresubcode
         ,.procedure_key
-    FROM historynokey
-    LEFT JOIN dimprocedure using (proceduretype,proceduresubcode)
-
+    FROM stg2_phistory
+    
 )
 
 SELECT * FROM final
