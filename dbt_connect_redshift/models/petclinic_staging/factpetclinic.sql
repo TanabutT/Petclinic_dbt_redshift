@@ -8,7 +8,7 @@ final as (
     SELECT
         date_key
         ,pet_key
-        ,procedure_key
+        ,treatmentcase_key
 
     FROM stg_factlesstable
         
