@@ -109,6 +109,9 @@ from pic here see stg_pets myfirstdbtmodel mysecondbtmodel are there
 query form stg_pets and run success too.  
 ดูการ dbt run แก้ไขไม่ให้ error ด้วย
 
+![dbtrun_success](resource/dbtrun_success13models.png)
+![dbtrun_success](resource/dbtrun_success13models2.png)  
+
 
 ### relationship from dbt
 จาก folder ใน Petclinic_dbt_redshift/dbt_connect_redshift/models/petclinic_staging/ เก็บ model ที่ทำไว้เป็น datawarehouse
@@ -127,14 +130,9 @@ dbt docs serve
 
 ไปกดที่ขวาล่าง สามารถดู lineage graph ของ datawarehouse ของเราได้
 
-![dbt_docs_serve_page>localhost:8080](./resource/dbt_docs_serve_page.png)
-![page>lineage_graph](./resource/lineage_graph_example_nomodel.png)
+![dbt_docs_serve_page>localhost:8080](./resource/dbt-docs-serve.png)
 
-
-
-
-
-
+![page>lineage_graph](resource/lineage_graph_petclinic_success2.png)
 
 
 
@@ -144,9 +142,69 @@ To close all service
 - Delete Redshift cluster** with out keeping snapshot** - [ ] snap shot 
 
 
-
-
-
 ## watch cost explorer
 
 ![cost](resource/redshift_cost1.jpg)
+
+
+## Tableau-Redshift connection
+
+connect easily with 
+![Tableau-Redshift connection](resource/tableau-redshift-connection.png)  
+
+- Server redshift-cluster-petclinic.cnrhltyzddie.us-east-1.redshift.amazonaws.com
+- port 5439 
+- database name petclinic
+- username : "dbuser " 
+- password : "yourpassword"
+and then sign in 
+
+### select table to work or join table from conncetion
+- Choose schema here is  public   
+![Alt text](resource/tableau-redshift-selectschemapublic.png)  
+
+- select table to work with  
+
+![select table to work](resource/tableau-redshift-live-update.png)  
+or  
+
+![join table](resource/tableau-redshift-relation-table.png)  
+
+- see at the top right corner that connection "live" with Redshift cluster database
+
+### change some data type before go to build visualization
+- Check data type properly
+- change Date Treated to date format
+- change price to number format
+- update now (update live data) 
+
+### Visualization to Awser the Question
+#### from problem statement:
+* Q1 : Petclinic in 2016, How seasanal revenue gain in each interval?
+
+* Q2 : What procedure or treatment in each month cost the most to pet owner?  
+
+* Q3 : Which king of pet cost the most to the owner? 
+
+* Q4 : Can we estimate the inventory managment on overall and specific procedure seasonally next yaer?
+
+#### Awser with your eyes
+PetClinic Revenue 2016:  
+
+https://public.tableau.com/app/profile/tanabut.taksinavongskul/viz/PetClinicRevenue2016/Revenues2016  
+
+* A1 : look at the dash board here for monthly revenue and total in year 2016  
+* A2 : dashboard show proceduretype that cost the most (give the most revenue to clinic = General Surgery)
+  - Notice : Rabie Vaccination is the most freqeunt of procedure
+* A3 : Pet owner can see the over the cost for kind of pet and gender of pet (total of all pet in year)  
+
+* A4 : here dashboard to know usage on 2016  
+Inventory Mornitor PetClinic:  
+
+https://public.tableau.com/app/profile/tanabut.taksinavongskul/viz/InventoryMornitorPetClinic/InventoryManagement
+
+-----------------THE END?---------------------
+Note : Drill down more with the time serie data and dig some more insight.  
+
+
+Happy Analyzing!
