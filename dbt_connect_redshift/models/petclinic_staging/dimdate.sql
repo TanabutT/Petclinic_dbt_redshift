@@ -11,7 +11,7 @@ final as (
                 ORDER BY date_treated ASC
                  
             ) AS date_key
-        ,DISTINCT convert(datetime, date_treated, 23) as date_treated
+        ,DISTINCT date_treated
 
     FROM history
 )
