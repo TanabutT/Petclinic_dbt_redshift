@@ -112,6 +112,11 @@ query form stg_pets and run success too.
 ![dbtrun_success](resource/dbtrun_success13models.png)
 ![dbtrun_success](resource/dbtrun_success13models2.png)  
 
+* จาก data source ที่นำมาใช้  (ซึ่งตอนนี้อยู่ใน redshift แล้ว)
+![datasource](resource/datasource_pic.png)
+* ออกแบบให้เป็น star schema เผื่อใช้งาน เป็น datawarehouse 
+![datawarehousedesign](resource/datawarehousedesign.png)  
+มีการปรับเปลี่ยนไปบ้างในการ join กัน สุดท้ายไปดู docs ที่ได้จาก dbt docs serve 
 
 ### relationship from dbt
 จาก folder ใน Petclinic_dbt_redshift/dbt_connect_redshift/models/petclinic_staging/ เก็บ model ที่ทำไว้เป็น datawarehouse
