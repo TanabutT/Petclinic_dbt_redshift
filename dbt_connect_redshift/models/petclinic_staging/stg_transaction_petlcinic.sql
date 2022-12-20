@@ -5,7 +5,7 @@
   )
 }}
 
-with stg_factlesstable (
+with stg_factlesstable as (
 
     SELECT * FROM {{ref('stg_factlesstable')}}
 ),

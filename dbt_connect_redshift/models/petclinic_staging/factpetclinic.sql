@@ -10,7 +10,7 @@ final as (
         ,pet_key
         ,procedure_key
 
-    FROM stg_factlessTable
+    FROM stg_factlesstable
         
 )
 
