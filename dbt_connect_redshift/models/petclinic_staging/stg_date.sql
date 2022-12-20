@@ -1,19 +1,20 @@
-with stg_date as (
+with stg_phistory as (
 
-    SELECT * FROM {{ ref('stg_date')}}
+    SELECT * FROM {{ ref('stg_phistory')}}
 ),
 
 final as (
-    SELECT
-        ROW_NUMBER() OVER 
-            ( 
-                ORDER BY date_treated ASC
-                 
-            ) AS date_key
-        , *
-        
+    select distinct date_treated from stg_phistory
 
-    FROM stg_date
+    -- SELECT
+    --     -- ROW_NUMBER() OVER 
+    --     --     ( 
+    --     --         ORDER BY date_treated ASC
+                 
+    --     --     ) AS date_key
+    --     ,DISTINCT date_treated
+
+    -- FROM stg_phistory
 )
 -- 1The last argument of CONVERT seems to determine the format used for parsing. Consult MSDN docs for CONVERT.
 
