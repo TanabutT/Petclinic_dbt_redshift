@@ -11,10 +11,10 @@ dimprocedure as (
 final as (
 
     SELECT 
-        historynokey.petid
-        ,historynokey.date_treated
-        ,historynokey.proceduretype
-        ,historynokey.proceduresubcode
+        stg_phistory.petid
+        ,stg_phistory.date_treated
+        ,stg_phistory.proceduretype
+        ,stg_phistory.proceduresubcode
         ,dimprocedure.procedure_key
     FROM stg_phistory
     LEFT JOIN dimprocedure using (proceduretype,proceduresubcode)
