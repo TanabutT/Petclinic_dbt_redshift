@@ -1,4 +1,4 @@
-with facttable as (
+with stg_factlessTable as (
 
     SELECT * FROM {{ ref('stg_factlessTable')}}
 ),
@@ -10,7 +10,7 @@ final as (
         ,pet_key
         ,procedure_key
 
-    FROM facttable
+    FROM stg_factlessTable
         
 )
 
