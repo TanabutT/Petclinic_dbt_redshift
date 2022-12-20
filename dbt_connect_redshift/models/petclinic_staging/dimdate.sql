@@ -3,6 +3,7 @@ with stg_date as (
     SELECT * FROM {{ ref('stg_date')}}
 ),
 
+
 final as (
     SELECT
         ROW_NUMBER() OVER 

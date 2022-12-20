@@ -1,26 +1,27 @@
-with stg2_phistory as (
+with stg3_phistorywithprocedurekey as (
 
-    SELECT * FROM {{ ref('stg2_phistory')}}
+    SELECT * FROM {{ ref('stg3_phistorywithprocedurekey')}}
 ),
 
+with dimdate as (
+
+    SELECT * FROM {{ ref('dimdate')}}
+),
 
 
 final as (
 
     SELECT 
-        ROW_NUMBER() OVER 
-            ( 
-                ORDER BY date_treated,petid ASC
-                 
-            ) AS treatmentcase_key
-         
+        treatmentcase_key         
         ,petid
         ,date_treated
+        ,date_key
         ,proceduretype
         ,proceduresubcode
         ,procedure_key
         
-    FROM stg2_phistory
+    FROM stg3_phistorywithprocedurekey
+    Left join dimdate using (date_treated)
     
 )
 
