@@ -40,10 +40,10 @@ final as (
         ,dimpet.zipcode
 
         ,stg4_phistorywithdatekey.procedure_key
-        ,stg4_phistorywithdatekey.proceduretype
-        ,stg4_phistorywithdatekey.proceduresubcode
-        ,stg4_phistorywithdatekey.procedure_description
-        ,stg4_phistorywithdatekey.price
+        ,dimprocedure.proceduretype
+        ,dimprocedure.proceduresubcode
+        ,dimprocedure.procedure_description
+        ,dimprocedure.price
 
         
     FROM stg4_phistorywithdatekey
