@@ -1,6 +1,6 @@
-with stg_factlessTable as (
+with stg_factlesstable as (
 
-    SELECT * FROM {{ ref('stg_factlessTable')}}
+    SELECT * FROM {{ ref('stg_factlesstable')}}
 ),
 
 final as (
