@@ -22,28 +22,28 @@ stg4_phistorywithdatekey as (
 
 final as (
     SELECT 
-        stg3_phistorywithkey.date_key
-        ,stg3_phistorywithkey.date_treated
+        stg4_phistorywithdatekey.date_key
+        ,stg4_phistorywithdatekey.date_treated
 
-        ,stg3_phistorywithkey.pet_key
-        ,stg3_phistorywithkey.petid
-        ,stg3_phistorywithkey.kind
-        ,stg3_phistorywithkey.gender
-        ,stg3_phistorywithkey.age
-        ,stg3_phistorywithkey.ownerid
-        ,stg3_phistorywithkey.ownername
-        ,stg3_phistorywithkey.ownersurname
-        ,stg3_phistorywithkey.streetaddress
-        ,stg3_phistorywithkey.city
-        ,stg3_phistorywithkey.statename
-        ,stg3_phistorywithkey.fullstatename
-        ,stg3_phistorywithkey.zipcode
+        ,stg4_phistorywithdatekey.pet_key
+        ,stg4_phistorywithdatekey.petid
+        ,stg4_phistorywithdatekey.kind
+        ,stg4_phistorywithdatekey.gender
+        ,stg4_phistorywithdatekey.age
+        ,stg4_phistorywithdatekey.ownerid
+        ,stg4_phistorywithdatekey.ownername
+        ,stg4_phistorywithdatekey.ownersurname
+        ,stg4_phistorywithdatekey.streetaddress
+        ,stg4_phistorywithdatekey.city
+        ,stg4_phistorywithdatekey.statename
+        ,stg4_phistorywithdatekey.fullstatename
+        ,stg4_phistorywithdatekey.zipcode
 
-        ,stg3_phistorywithkey.procedure_key
-        ,stg3_phistorywithkey.proceduretype
-        ,stg3_phistorywithkey.proceduresubcode
-        ,stg3_phistorywithkey.procedure_description
-        ,stg3_phistorywithkey.price
+        ,stg4_phistorywithdatekey.procedure_key
+        ,stg4_phistorywithdatekey.proceduretype
+        ,stg4_phistorywithdatekey.proceduresubcode
+        ,stg4_phistorywithdatekey.procedure_description
+        ,stg4_phistorywithdatekey.price
 
         
     FROM stg4_phistorywithdatekey
