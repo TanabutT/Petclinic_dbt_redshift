@@ -3,7 +3,7 @@ with stg3_phistorywithprocedurekey as (
     SELECT * FROM {{ ref('stg3_phistorywithprocedurekey')}}
 ),
 
-with dimdate as (
+dimdate as (
 
     SELECT * FROM {{ ref('dimdate')}}
 ),
