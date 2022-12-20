@@ -24,6 +24,8 @@ final as (
     SELECT 
         stg4_phistorywithdatekey.date_key
         ,stg4_phistorywithdatekey.date_treated
+        
+        ,stg4_phistorywithdatekey.treatmentcase_key
 
         ,dimpet.pet_key
         ,stg4_phistorywithdatekey.petid
