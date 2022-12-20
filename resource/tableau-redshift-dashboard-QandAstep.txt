@@ -1,0 +1,3 @@
+change Date Treated to date format
+change price to number format
+update now (update live data)
