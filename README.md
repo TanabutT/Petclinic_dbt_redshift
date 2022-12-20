@@ -111,6 +111,7 @@ query form stg_pets and run success too.
 
 
 ### relationship from dbt
+จาก folder ใน Petclinic_dbt_redshift/dbt_connect_redshift/models/petclinic_staging/ เก็บ model ที่ทำไว้เป็น datawarehouse
 เมื่อลองทำ datawarehouse และ staging table ไว้ใช้งานแล้ว สามารถสร้าง docs ไว้ได้ 
 สร้าง doc ใน dbt จากคำสั่ง 
 
@@ -122,7 +123,7 @@ dbt docs generate
 ```sh
 dbt docs serve 
 ```
-!!! ลองรัน dbt docs serve --port 8089 แล้วเปลี่ยน ไม่ได้ควรใช้ default ถึงจะขึ้น
+!!! ลองรัน dbt docs serve --port 8089 แล้วเปลี่ยน ไม่ได้ควรใช้ default ถึงจะขึ้นที่ port 8080
 
 ไปกดที่ขวาล่าง สามารถดู lineage graph ของ datawarehouse ของเราได้
 
