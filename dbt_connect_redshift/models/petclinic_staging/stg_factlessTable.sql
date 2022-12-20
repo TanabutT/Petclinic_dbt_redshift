@@ -25,19 +25,19 @@ final as (
         stg4_phistorywithdatekey.date_key
         ,stg4_phistorywithdatekey.date_treated
 
-        ,stg4_phistorywithdatekey.pet_key
+        ,dimpet.pet_key
         ,stg4_phistorywithdatekey.petid
-        ,stg4_phistorywithdatekey.kind
-        ,stg4_phistorywithdatekey.gender
-        ,stg4_phistorywithdatekey.age
-        ,stg4_phistorywithdatekey.ownerid
-        ,stg4_phistorywithdatekey.ownername
-        ,stg4_phistorywithdatekey.ownersurname
-        ,stg4_phistorywithdatekey.streetaddress
-        ,stg4_phistorywithdatekey.city
-        ,stg4_phistorywithdatekey.statename
-        ,stg4_phistorywithdatekey.fullstatename
-        ,stg4_phistorywithdatekey.zipcode
+        ,dimpet.kind
+        ,dimpet.gender
+        ,dimpet.age
+        ,dimpet.ownerid
+        ,dimpet.ownername
+        ,dimpet.ownersurname
+        ,dimpet.streetaddress
+        ,dimpet.city
+        ,dimpet.statename
+        ,dimpet.fullstatename
+        ,dimpet.zipcode
 
         ,stg4_phistorywithdatekey.procedure_key
         ,stg4_phistorywithdatekey.proceduretype

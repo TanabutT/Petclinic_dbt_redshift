@@ -1,6 +1,6 @@
-with stg2_phistory as (
+with stg2_phistorywithprocedurekey as (
 
-    SELECT * FROM {{ ref('stg2_phistory')}}
+    SELECT * FROM {{ ref('stg2_phistorywithprocedurekey')}}
 ),
 
 
@@ -20,7 +20,7 @@ final as (
         ,proceduresubcode
         ,procedure_key
         
-    FROM stg2_phistory
+    FROM stg2_phistorywithprocedurekey
     
 )
 

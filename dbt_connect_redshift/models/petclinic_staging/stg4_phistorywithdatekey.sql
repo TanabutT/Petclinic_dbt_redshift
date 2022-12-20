@@ -1,6 +1,6 @@
-with stg3_phistorywithprocedurekey as (
+with stg3_phistorywithtreatmentcasekey as (
 
-    SELECT * FROM {{ ref('stg3_phistorywithprocedurekey')}}
+    SELECT * FROM {{ ref('stg3_phistorywithtreatmentcasekey')}}
 ),
 
 dimdate as (
@@ -20,7 +20,7 @@ final as (
         ,proceduresubcode
         ,procedure_key
         
-    FROM stg3_phistorywithprocedurekey
+    FROM stg3_phistorywithtreatmentcasekey
     Left join dimdate using (date_treated)
     
 )
