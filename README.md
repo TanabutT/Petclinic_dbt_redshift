@@ -189,9 +189,9 @@ or
 
 * Q2 : What procedure or treatment in each month cost the most to pet owner?  
 
-* Q3 : Which king of pet cost the most to the owner? 
+* Q3 : Which kind of pet cost the most to the owner? 
 
-* Q4 : Can we estimate the inventory managment on overall and specific procedure seasonally next yaer?
+* Q4 : Can we estimate the inventory managment on overall and specific procedure seasonally next year?
 
 #### Awser with your eyes
 PetClinic Revenue 2016:  
